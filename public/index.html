@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMCET Application</title>
+    <!-- Modern Typography: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <div class="container glass-panel">
+        <div class="header">
+            <h1>SMCET Portal</h1>
+            <p class="subtitle">Submit your application securely</p>
+        </div>
+        
+        <form id="applicationForm" class="form-layout">
+            <div class="form-group floating-label">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name">Full Name</label>
+            </div>
+            
+            <div class="form-group file-upload-wrapper">
+                <p class="upload-title">Profile Photo</p>
+                <div class="file-upload-box">
+                    <span class="upload-icon">📁</span>
+                    <p class="upload-text">Click to browse (JPEG only)</p>
+                    <input type="file" id="imageUpload" name="image" accept=".jpg, .jpeg" class="file-input" required>
+                </div>
+            </div>
+            
+            <div id="error-message" class="error hidden"></div>
+            
+            <div class="image-actions">
+                <button type="button" id="imgUploadedBtn" class="success-btn hidden">
+                    <span class="check-icon">✓</span> Image Uploaded (Click to Preview)
+                </button>
+            </div>
+            
+            <div id="previewArea" class="hidden preview-container">
+                <p class="preview-title">Preview</p>
+                <img id="imagePreview" src="" alt="Profile Preview">
+            </div>
+            
+            <button type="submit" id="submitBtn" class="primary-btn">Submit Application</button>
+        </form>
+        <div id="success-message" class="success hidden"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
