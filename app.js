@@ -12,6 +12,11 @@ if (!fs.existsSync(uploadsDir)){
     fs.mkdirSync(uploadsDir);
 }
 
+// Basic status route
+app.get('/status', (req, res) => {
+    res.send('App is working');
+});
+
 app.use(express.static('public'));
 app.use('/uploads', express.static('uploads'));
 app.use(express.json());
